@@ -13,7 +13,6 @@ import { ValidatorMessageContainer } from '../../../core/input-error/validator-m
   standalone: true,
   imports: [
     CommonModule,
-    FormsModule,
     BanWordsDirective,
     PasswordShouldMatchDirective,
     UniqueNicknameDirective,
