@@ -2,11 +2,8 @@
   <div class="form-field">
     <label for="name">First Name</label>
     <input
-
       required
       minlength="2"
-      appBanWords="test"
-
       name="first-name"
       type="text"
       id="name"
@@ -15,10 +12,8 @@
   <div class="form-field">
     <label for="last-name">Last Name</label>
     <input
-
       required
       minlength="2"
-
       name="last-name"
       type="text"
       id="last-name"
@@ -27,14 +22,10 @@
   <div class="form-field">
     <label for="nickname">Nickname</label>
     <input
-
       required
       minlength="3"
       pattern="^[\w.]+$"
-      [appBanWords]="isAdult ? ['test', 'test_test', 'dummy'] : []"
-      appUniqueNickname
       name="nickname"
-
       type="text"
       id="nickname"
       placeholder="Come up with a nickname">
@@ -43,10 +34,8 @@
   <div class="form-field">
     <label for="email">Email</label>
     <input
-
       email
       required
-
       name="email"
       type="email"
       id="email"
@@ -62,19 +51,17 @@
     <div class="form-field form-field--small">
       <label for="passport">Passport Number</label>
       <input
-
         name="passport"
         type="text"
         id="passport"
         placeholder="Provide Passport Data">
     </div>
   </div>
-  <fieldset ngModelGroup="address">
+  <fieldset>
     <legend>Address</legend>
     <div class="form-field">
       <label for="full-address">Full Adress</label>
       <input
-
         name="full-address"
         type="text"
         id="full-address"
@@ -83,7 +70,6 @@
     <div class="form-field">
       <label for="city">City</label>
       <input
-
         name="city"
         type="text"
         id="city"
@@ -92,20 +78,17 @@
     <div class="form-field">
       <label for="post-code">Post Code</label>
       <input
-
         name="post-code"
         type="number"
         id="post-code"
         placeholder="Post code">
     </div>
   </fieldset>
-  <fieldset ngModelGroup="password" appPasswordShouldMatch [container]="containerDir.container">
+  <fieldset >
     <legend>User Password</legend>
     <div class="form-field">
       <label for="password">Password</label>
       <input
-
-
         name="password"
         type="password"
         id="password"
@@ -114,13 +97,11 @@
     <div class="form-field">
       <label for="confirm-password">Confirm password</label>
       <input
-        withoutValidationErrors
-
         name="confirm-password"
         type="password"
         id="confirm-password"
         placeholder="Confirm the password">
-      <ng-container validatorMessageContainer #containerDir="validatorMessageContainer"></ng-container>
+      <!-- <ng-container validatorMessageContainer #containerDir="validatorMessageContainer"></ng-container> -->
     </div>
   </fieldset>
   <button>Save</button>
