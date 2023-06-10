@@ -17,7 +17,7 @@ import { ValidatorMessageContainer } from '../../../core/input-error/validator-m
 @Component({
   selector: 'app-template-forms-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './template-forms-page.component.html',
   styleUrls: [
     '../../common-page.scss',
